@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload and Adjust Image</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" accept="image/*">
+            <select id="bppSelect">
+                <option value="1">1 bpp</option>
+                <option value="2">2 bpp</option>
+                <option value="3">3 bpp</option>
+                <option value="4">4 bpp</option>
+                <option value="5">5 bpp</option>
+                <option value="6">6 bpp</option>
+                <option value="7">7 bpp</option>
+                <option value="8">8 bpp</option>
+            </select>
+            <input type="number" id="brightnessInput" placeholder="Brightness (0-255)" min="0" max="255" value="0">
+            <input type="number" id="contrastInput" placeholder="Contrast (0-3)" step="0.1" min="0" max="3" value="1">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="imageDisplay"></div>
+    </div>
+    <script src="static/uploads.js"></script>
+</body>
+
+</html>
